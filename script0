@@ -1,0 +1,109 @@
+# !/bin/bash
+
+mkdir lab0
+cd lab0
+mkdir darmanitan5
+cd darmanitan5
+touch dragonite
+echo "weight=463.0 height=87.0 atk=13 def=10" > dragonite
+mkdir bellossom
+touch glaceon
+echo "Способности" > glaceon
+echo "Freezing Point Snow Cloak Clear Body" >> glaceon
+cd ..
+touch graveler0
+echo "Развитые способности" > graveler0
+echo "Sand Veil" >> graveler0
+mkdir muk5
+cd muk5
+mkdir vigoroth 
+touch linoone
+echo "satk=5 sdef=6 spd=10" > linoone
+touch grimer
+echo "weight=66.1" > grimer
+echo "height=35.0 atk=8 def=5" >> grimer
+touch rhyhorn 
+echo "Способности Landslide Mountain Peak" > rhyhorn
+echo "Lightningrod Rock Head" >> rhyhorn
+cd .. 
+touch palpitoad2
+echo "Тип диеты" > palpitoad2
+echo “Herbivore” >> palpitoad2
+mkdir whimsicott1
+cd whimsicott1
+mkdir roselia 
+touch pelipper
+echo "Развитые способности Rain Dish Water" > pelipper
+echo "Absorb" >> pelipper
+touch starly
+echo "Тип диеты Herbivore" > starly
+mkdir sharpedo
+mkdir dragonair
+cd ..
+touch wurmple8
+echo "Способности Swarm" > wurmple8
+echo "Shield Dust Oblivious" >> wurmple8
+
+
+
+chmod u=rwx,g=rwx,o=rwx ~/lab0/darmanitan5
+chmod o=rw ~/lab0/darmanitan5/dragonite
+chmod 755 ~/lab0/darmanitan5/bellossom
+chmod 064 ~/lab0/darmanitan5/glaceon
+chmod u=r,g=,o= ~/lab0/graveler0
+chmod u=rwx,g=wx,o=wx ~/lab0/muk5
+chmod u=rwx,g=rwx,o=rwx ~/lab0/muk5/vigoroth
+chmod 044 ~/lab0/muk5/linoone
+chmod 046 ~/lab0/muk5/grimer
+chmod u=,g=r,o=r ~/lab0/muk5/rhyhorn
+chmod u=,g=,o=rw ~/lab0/palpitoad2
+chmod u=wx,g=wx,o=rx ~/lab0/whimsicott1
+chmod u=rx,g=x,o=wx ~/lab0/whimsicott1/roselia
+chmod u=r,g=,o=r ~/lab0/whimsicott1/pelipper
+chmod u=rw,g=r,o= ~/lab0/whimsicott1/starly 
+chmod u=rx,g=rwx,o=rwx ~/lab0/whimsicott1/sharpedo
+chmod 750 ~/lab0/whimsicott1/dragonair
+chmod u=r,g=r,o=r ~/lab0/wurmple8
+
+
+
+chmod 444 ~/lab0/graveler0
+touch ~/lab0/darmanitan5/glaceongraveler
+chmod 644 ~/lab0/darmanitan5/glaceongraveler
+cp ~/lab0/graveler0 ~/lab0/darmanitan5/glaceongraveler
+chmod u=rwx,g=x,o=wx ~/lab0/whimsicott1/roselia
+cp ~/lab0/wurmple8 ~/lab0/whimsicott1/roselia
+chmod 644 ~/lab0/darmanitan5/dragonite
+touch ~/lab0/graveler0_85
+chmod +w ~/lab0/graveler0_85
+cat ~/lab0/darmanitan5/dragonite ~/lab0/darmanitan5/dragonite > ~/lab0/graveler0_85
+chmod +r ~/lab0/whimsicott1
+cp -r ~/lab0/whimsicott1 ~/lab0/darmanitan5/bellossom
+chmod u=rw,g=r,o=r ~/lab0/wurmple8
+ln -s ~/lab0/wurmple8 ~/lab0/whimsicott1/starlywurmple
+chmod u=rwx,g=wx,o=rx ~/lab0/whimsicott1
+ln -s ~/lab0/whimsicott1 Copy_52
+chmod +r palpitoad2
+ln ~/lab0/palpitoad2 ~/lab0/darmanitan5/glaceonpalpitoad
+
+
+chmod +r ~/lab0/muk5/*    
+chmod +x ~/lab0/muk5/
+touch /tmp/errors.txt
+wc -m muk5/* 2>/tmp/errors.txt | sort -nr
+chmod -R +rx ~/lab0
+ls -lR ~/lab0 2>/tmp/errors.txt | grep -E '^[-d].* w[^/]*$' | sort -k2 -nr
+cat ~/lab0/darmanitan5/dragonite ~/lab0/darmanitan5/glaceon ~/lab0/muk5/linoone ~/lab0/muk5/grimer 2>&1 | grep -vi "de"
+ls -lR ~/lab0 2>/dev/null | grep -E '^[-d].*r$' | sort -k2 -nr | head -4
+wc -l ~/lab0/darmanitan5/glaceon ~/lab0/muk5/linoone ~/lab0/muk5/grimer ~/lab0/muk5/rhyhorn 2>/tmp/errors.txt  | sort -n
+ls -R ~/lab0 2>/dev/null | grep -E 'n$' | sort | while read file; do cat -n "$file" 2>/dev/null; done 
+
+
+
+rm ~/lab0/palpitoad2
+rm ~/lab0/muk5/linoone
+rm ~/lab0/whimsicott1/starlywurmp*
+rm ~/lab0/darmanitan5/glaceonpalpito*
+rm -r ~/lab0/darmanitan5
+rmdir ~/lab0/darmanitan5
+rmdir ~/lab0/whimsicott1/roselia

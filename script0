@@ -96,7 +96,7 @@ ls -lR ~/lab0 2>/tmp/errors.txt | grep -E '^[-d].* w[^/]*$' | sort -k2 -nr
 cat ~/lab0/darmanitan5/dragonite ~/lab0/darmanitan5/glaceon ~/lab0/muk5/linoone ~/lab0/muk5/grimer 2>&1 | grep -vi "de"
 ls -lR ~/lab0 2>/dev/null | grep -E '^[-d].*r$' | sort -k2 -nr | head -4
 wc -l ~/lab0/darmanitan5/glaceon ~/lab0/muk5/linoone ~/lab0/muk5/grimer ~/lab0/muk5/rhyhorn 2>/tmp/errors.txt  | sort -n
-ls -R ~/lab0 2>/dev/null | grep -E 'n$' | sort | while read file; do cat -n "$file" 2>/dev/null; done 
+cat -n `ls -R ~/lab0 2>/dev/null | grep -E 'n$' | sort` 2>/dev/null
 
 
 

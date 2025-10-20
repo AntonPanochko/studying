@@ -90,7 +90,7 @@ ln ~/lab0/palpitoad2 ~/lab0/darmanitan5/glaceonpalpitoad
 chmod +r ~/lab0/muk5/*    
 chmod +x ~/lab0/muk5/
 touch /tmp/errors.txt
-chmod 777 /tmp/errors.txt
+chmod 755 /tmp/errors.txt
 wc -m muk5/* 2>/tmp/errors.txt | sort -nr
 chmod -R +rx ~/lab0
 ls -lR ~/lab0 2>/tmp/errors.txt | grep -E '^[-d].* w[^/]*$' | sort -k2 -nr
